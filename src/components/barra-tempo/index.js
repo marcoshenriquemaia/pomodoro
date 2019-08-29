@@ -1,12 +1,11 @@
 import CriarElemento from "../shared/cria-elemento/index.js";
 
 
-const BarraTempo = (start) => {
+const BarraTempo = () => {
     const boxBarraTempo = document.querySelector('.box-barra-tempo');
-    if (!start) {
-        boxBarraTempo.removeChild(document.querySelector('.barra-tempo'))
-        return;
-    };
+    const barraTempo = document.querySelector('.barra-tempo');
+
+    barraTempo && boxBarraTempo.removeChild(barraTempo);
     const barra = CriarElemento({ tipoElemento: 'div', classes: ['barra-tempo'] })
 
     boxBarraTempo.appendChild(barra);

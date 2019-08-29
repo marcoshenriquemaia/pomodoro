@@ -1,4 +1,4 @@
-const CriarElemento = ({ tipoElemento, conteudo, classes, cor, icone, alt, tipo, placeholder, id, nameInput }) => {
+const CriarElemento = ({ tipoElemento, conteudo, classes, cor, icone, alt, tipo, placeholder, id, nameInput, imagem }) => {
     const elemento = document.createElement(tipoElemento);
 
     if (conteudo) elemento.textContent = conteudo;
@@ -19,6 +19,7 @@ const CriarElemento = ({ tipoElemento, conteudo, classes, cor, icone, alt, tipo,
         elemento.classList.add('icones');
         elemento.classList.add(DictionaryIcones[icone]);
     }
+    if (imagem) elemento.setAttribute('src', `../../../src/assets/icons/${imagem}`);
 
     return elemento;
 }
