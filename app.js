@@ -19,10 +19,9 @@ $botao.addEventListener('click', () => {
     $botao.textContent == 'x' ? $botao.textContent = 'Start' : $botao.textContent = 'x';
     $wrapperBarraTempo.classList.toggle('box-barra-tempo-on');
     $botao.classList.toggle('botao-temporizador-off');
-    console.log(status)
     BarraTempo();
     CardHistorico({ start });
-    Contador(status);
+    Contador({status});
 })
 
 $botaoEstatistica.addEventListener('click', ()=>{
