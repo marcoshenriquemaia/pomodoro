@@ -11,21 +11,24 @@ const textSeparacao = document.querySelector('.separacao-historico');
 
 
 let start = false;
-let status = false;
 
 $botao.addEventListener('click', () => {
     start = !start;
-    if ($botao.textContent == 'Start') status = !status;
+    status = !status;
     $botao.textContent == 'x' ? $botao.textContent = 'Start' : $botao.textContent = 'x';
     $wrapperBarraTempo.classList.toggle('box-barra-tempo-on');
     $botao.classList.toggle('botao-temporizador-off');
     BarraTempo();
     CardHistorico({ start });
-    Contador({status});
+    Contador();
+    console.log($botao.textContent);
+    console.log(status);
 })
+
 
 $botaoEstatistica.addEventListener('click', ()=>{
     Grafico();
     textSeparacao.classList.toggle('separacao-historico-grafico');
 })
+
 
