@@ -9,16 +9,18 @@
     <link rel="stylesheet" href="./src/assets/theme/style.css">
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
-    <title>Podomo</title>
+
+    <title>Pomodoro</title>
 </head>
 
 <body>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0/dist/Chart.min.js"></script>
     <section class='container'>
-        <div class='box-temporizador'>
+        <!-- <div class='box-temporizador'>
             <span class='temporizador'>25:00</span>
             <div class='box-barra-tempo'></div>
             <button class='botao-temporizador'>Start</button>
-        </div>
+        </div> -->
         <div class='separacao-historico'>
             <span class='text-separacao-historico'>Histórico</span>
         </div>
@@ -29,7 +31,7 @@
             <i class="far fa-chart-bar icones"></i>
         </div>
     </section>
-    <script type="module"> var status = false;</script>
+    <script> var foco = true; var tempo = { atual: 1500, antigo: 1500 };</script>
     <script src="https://kit.fontawesome.com/757223f72a.js"></script>
     <script type='module' src='app.js'></script>
 </body>

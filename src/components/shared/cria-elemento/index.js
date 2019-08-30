@@ -1,4 +1,4 @@
-const CriarElemento = ({ tipoElemento, conteudo, classes, cor, icone, alt, tipo, placeholder, id, nameInput, imagem }) => {
+const CriarElemento = ({ tipoElemento, conteudo, classes, cor, icone, alt, tipo, placeholder, id, nameInput, imagem, width, height }) => {
     const elemento = document.createElement(tipoElemento);
 
     if (conteudo) elemento.textContent = conteudo;
@@ -6,7 +6,7 @@ const CriarElemento = ({ tipoElemento, conteudo, classes, cor, icone, alt, tipo,
     if (alt) elemento.setAttribute('alt', alt);
     if (tipo) elemento.setAttribute('type', tipo);
     if (placeholder) elemento.setAttribute('placeholder', placeholder);
-    if (id) elemento.idList.add(id);
+    if (id) elemento.setAttribute('id', id);
     if (placeholder) elemento.setAttribute('placeholder', placeholder);
     if (nameInput) elemento.setAttribute('for', nameInput);
     if (classes) {
@@ -20,6 +20,8 @@ const CriarElemento = ({ tipoElemento, conteudo, classes, cor, icone, alt, tipo,
         elemento.classList.add(DictionaryIcones[icone]);
     }
     if (imagem) elemento.setAttribute('src', `../../../src/assets/icons/${imagem}`);
+    if (width) elemento.setAttribute('width', width);
+    if (height) elemento.setAttribute('height', height);
 
     return elemento;
 }
