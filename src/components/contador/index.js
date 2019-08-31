@@ -1,9 +1,5 @@
 import CardHistorico from "../card-historico/index.js";
 
-const $temporizador = document.querySelector('.temporizador');
-const $botao = document.querySelector('.botao-temporizador');
-const $boxBarraTempo = document.querySelector('.box-barra-tempo');
-const boxTemporizador = document.querySelector('.box-temporizador');
 
 
 const formataTempo = (tempo1) => {
@@ -17,17 +13,20 @@ const formataTempo = (tempo1) => {
 
 
 const Contador = () => {
+    const $temporizador = document.querySelector('.temporizador');
     if (!foco) {
-        CardHistorico({tempoFinal: formataTempo(tempo.antigo)});
+        CardHistorico({ tempoFinal: formataTempo(tempo.antigo) });
         foco = true;
         tempo.atual = 1500;
+        tempo.antigo == 300 && (tempo.antigo = 1500);
+        console.log(tempo.atual)
         $temporizador.textContent = formataTempo(tempo.atual);
         return;
     };
     if (foco) {
         if (!tempo.atual) {
             alterarBotao()
-            CardHistorico({tempoFinal: formataTempo(tempo.antigo)});
+            CardHistorico({ tempoFinal: formataTempo(tempo.antigo) });
             tempo.atual = tempo.antigo == 1500 ? 300 : 1500;
             tempo.antigo = tempo.antigo == 1500 ? 300 : 1500;
             $temporizador.textContent = formataTempo(tempo.atual);
@@ -46,6 +45,8 @@ const Contador = () => {
 
 
 const alterarBotao = () => {
+    const $boxBarraTempo = document.querySelector('.box-barra-tempo');
+    const $botao = document.querySelector('.botao-temporizador');
     $botao.textContent == 'Start' ? $botao.textContent = 'x' : $botao.textContent = 'Start';
     $botao.classList.toggle('botao-temporizador-off');
     $boxBarraTempo.classList.toggle('box-barra-tempo-on');
@@ -54,6 +55,8 @@ const alterarBotao = () => {
 const crescerBarra = () => {
     const $barraTempo = document.querySelector('.barra-tempo');
     let porcentagem = (((tempo.atual / tempo.antigo) * 100) - 100) * -1;
+    
+    console.log(tempo.atual, tempo.antigo);
     $barraTempo.style.width = porcentagem + "%";
 }
 

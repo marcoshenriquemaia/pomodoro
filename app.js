@@ -6,6 +6,8 @@ import BoxEstatisticaSucesso from "./src/components/box-estatistica-sucesso/inde
 import BoxFalhas from "./src/components/box-falhas/index.js";
 import Separador from "./src/components/separador/index.js";
 import BoxTemporizador from "./src/components/box-temporizador/index.js";
+import Home from "./src/pages/home/index.js";
+import Estatisticas from "./src/pages/estatisticas/index.js";
 
 const $container = document.querySelector('.container');
 const $botaoEstatistica = document.querySelector('.fa-chart-bar');
@@ -23,11 +25,14 @@ let pag = true;
 $botaoEstatistica.addEventListener('click', () => {
     if (!pag) return;
     pag = !pag;
-    Grafico();
-    Separador({ textSeparador: 'Geral', classe: 'separador-geral', pai: $boxHistorico });
-    BoxEstatisticaSucesso();
-    BoxFalhas();
-    textSeparacao.classList.toggle('separacao-historico-grafico');
+    const containerEstatisticas = document.querySelector('.container-estatisticas');
+    containerEstatisticas && containerEstatisticas.remove();
+    Estatisticas();
+    // Grafico();
+    // Separador({ textSeparador: 'Geral', classe: 'separador-geral', pai: $boxHistorico });
+    // BoxEstatisticaSucesso();
+    // BoxFalhas();
+    // textSeparacao.classList.toggle('separacao-historico-grafico');
 })
 
 $botaoHome.addEventListener('click', () => {
@@ -35,6 +40,8 @@ $botaoHome.addEventListener('click', () => {
     pag = !pag;
     const $boxTemporizador = document.querySelector('.box-temporizador');
     const grafico = document.querySelector('#myChart');
+    const containerEstatisticas = document.querySelector('.container-estatisticas');
+    containerEstatisticas.remove();
     $boxTemporizador.removeChild(grafico);
     BoxTemporizador();
     $boxHistorico.innerHTML = '';
@@ -42,6 +49,6 @@ $botaoHome.addEventListener('click', () => {
 })
 
 
-$container.onload = BoxTemporizador();
+$container.onload = Home();
 
 

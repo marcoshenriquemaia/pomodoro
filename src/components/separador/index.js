@@ -6,6 +6,8 @@ const Separador = ({textSeparador, pai, classe}) =>{
     
     pai.appendChild(divSeparador);
     divSeparador.appendChild(textSeparacao);
+
+    return divSeparador;
 }
 
 export default Separador;

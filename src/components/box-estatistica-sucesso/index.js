@@ -1,8 +1,6 @@
 import CriarElemento from "../shared/cria-elemento/index.js";
 
 const BoxEstatisticaSucesso = () =>{
-    const containerEstatistica = document.querySelector('.box-historico');
-
     const box = CriarElemento({tipoElemento: 'div', classes: ['box-estatistica']});
     const titulo = CriarElemento({tipoElemento: 'h1', conteudo: 'TOTAL FOCADO', classes: ['titulo-focado']});
     const wrapNumero = CriarElemento({tipoElemento: 'div', classes: ['wrap-numero-podomos']});
@@ -13,7 +11,6 @@ const BoxEstatisticaSucesso = () =>{
     const tituloTempo = CriarElemento({tipoElemento: 'span', classes: ['subtitulo'], conteudo: 'Total de tempo'});
     const tempoFocado = CriarElemento({tipoElemento: 'span', classes: ['tempo-focado'], conteudo: '05H 25 MIN'});
 
-    containerEstatistica.appendChild(box);
     box.appendChild(titulo);
     box.appendChild(wrapperNumeroTempo);
     wrapperNumeroTempo.appendChild(wrapNumero);
@@ -22,6 +19,8 @@ const BoxEstatisticaSucesso = () =>{
     wrapNumero.appendChild(numeroPomodoros);
     wrapTempo.appendChild(tituloTempo);
     wrapTempo.appendChild(tempoFocado);
+
+    return box;
 }
 
 export default BoxEstatisticaSucesso;

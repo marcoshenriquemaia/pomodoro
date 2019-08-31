@@ -1,6 +1,5 @@
 import CriarElemento from "../shared/cria-elemento/index.js";
 
-const $temporizado = document.querySelector('.temporizador');
 
 
 const CardHistorico = ({tempoFinal}) => {
@@ -8,7 +7,7 @@ const CardHistorico = ({tempoFinal}) => {
     const card = CriarElemento({ tipoElemento: 'div', classes: ['card-historico'] });
     const tempo = CriarElemento({ tipoElemento: 'span', classes: ['tempo-card-historico'], conteudo: tempoFinal });
     const imagemSeparacao = CriarElemento({ tipoElemento: 'img', imagem: foco ? 'barras.png' : 'barrasred.png', classes: ['imagem-card'] });
-
+    
     boxHistorico.appendChild(card);
     card.appendChild(tempo);
     card.appendChild(imagemSeparacao);
@@ -16,6 +15,7 @@ const CardHistorico = ({tempoFinal}) => {
 }
 
 const identificarStatus = (card) => {
+    const $temporizado = document.querySelector('.temporizador');
     const iconeCompleto = CriarElemento({ tipoElemento: 'img', imagem: 'valido.png' })
     const tempoFalha = CriarElemento({ tipoElemento: 'span', classes: ['tempo-card-historico'], conteudo: $temporizado.textContent})
 

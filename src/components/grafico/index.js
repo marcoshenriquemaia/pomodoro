@@ -1,4 +1,5 @@
 import CriarElemento from "../shared/cria-elemento/index.js";
+import BoxTemporizador from "../box-temporizador/index.js";
 
 
 
@@ -24,19 +25,10 @@ const data = {
     }]
 }
 
-const Grafico = () => {
-    const $boxTemporizador = document.querySelector('.box-temporizador');
-
-    const $botaoTemporizador = document.querySelector('.botao-temporizador');
-    const $temporizador = document.querySelector('.temporizador');
-    const $divBarraTempo = document.querySelector('.box-barra-tempo');
+const Grafico = (boxGrafico) => {
     const grafico = CriarElemento({ tipoElemento: 'canvas', id: 'myChart', width: 400, height: 250 });
-
-    $boxTemporizador.removeChild($temporizador);
-    $boxTemporizador.removeChild($divBarraTempo);
-    $boxTemporizador.removeChild($botaoTemporizador);
-    $boxTemporizador.appendChild(grafico);
-
+    boxGrafico.appendChild(grafico);
+    
     var ctx = document.getElementById('myChart').getContext('2d');
     var myBarChart = new Chart(ctx, {
         type: 'bar',
