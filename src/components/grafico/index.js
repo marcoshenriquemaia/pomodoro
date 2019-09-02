@@ -2,8 +2,6 @@ import CriarElemento from "../shared/cria-elemento/index.js";
 import BoxTemporizador from "../box-temporizador/index.js";
 
 
-
-
 const options = {
     scales: {
         yAxes: [{

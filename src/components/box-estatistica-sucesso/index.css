@@ -1,0 +1,51 @@
+.box-estatistica{
+    margin-top: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 95%;
+    height: 8rem;
+    border-radius: .5em;
+    background-image: linear-gradient(to right, #000000a6, rgba(0, 194, 255, 0.3))
+}
+.titulo-focado{
+    color: #fff;
+    margin-top: .5em;
+}
+.wrapper-numero-tempo{
+    display: flex;
+    justify-content: space-between;
+}
+.wrap-numero-podomos{
+    display: flex;
+    position: absolute;
+    left: .6em;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 7em;
+    height: 6em;
+}
+.wrap-tempo-focado{
+    display: flex;
+    position: absolute;
+    right: 3em;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 10em;
+    height: 6em;
+}   
+.subtitulo{
+    color: #fff;
+    margin-bottom: 1rem;
+    font-size: .7em;
+}
+.quantidade-pomodoros{
+    color: #fff;
+    font-size: 1.3em;
+}
+.tempo-focado{
+    color: #fff;
+    font-size: 1.3em;
+}

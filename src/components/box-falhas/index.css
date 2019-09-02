@@ -1,0 +1,15 @@
+.box-falhas{
+    margin-top: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 95%;
+    height: 8rem;
+    border-radius: .5em;
+    background-image: linear-gradient(to right, #000000a6, rgba(255, 0, 0, 0.3));
+}
+.titulo-total-falhas{
+    margin-bottom: 3em;
+    color: #fff;
+    margin-top: .5em;
+}

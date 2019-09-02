@@ -1,6 +1,9 @@
 import CriarElemento from "../shared/cria-elemento/index.js";
 import BarraTempo from "../barra-tempo/index.js";
 import Contador from "../contador/index.js";
+import ColocaCss from "../../utils/coloca-css/indes.js";
+
+ColocaCss({path: 'box-temporizador'});
 
 const BoxTemporizador = () => {
     const box = CriarElemento({tipoElemento: 'div', classes: ['box-temporizador']});

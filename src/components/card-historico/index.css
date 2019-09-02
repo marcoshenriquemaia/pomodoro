@@ -1,0 +1,30 @@
+.card-historico{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 95%;
+    height: 3.8rem;
+    margin-top: 1.5em;
+    border-radius: .5em;
+    background-image: linear-gradient(to right, #0000009d, rgba(0, 195, 255, 0.39));
+    /* opacity: .5; */
+}
+.tempo-card-historico{
+    color: #fff;
+    font-size: 1.3em;
+}
+.imagem-card{
+    transform: translateY(4px);
+}
+.text-card-historico{
+    color: #fff;
+    transform: translateX(-2em);
+}
+.text-card-historico-falha{
+    color: #fff;
+    transform: translateX(-1.2em);
+    opacity: none;
+}
+.box-historico-falha{
+    background-image: linear-gradient(to right, #000000a6, rgba(255, 0, 0, 0.3));
+}

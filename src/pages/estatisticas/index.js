@@ -2,6 +2,9 @@ import CriarElemento from "../../components/shared/cria-elemento/index.js";
 import Grafico from "../../components/grafico/index.js";
 import BoxEstatisticaSucesso from "../../components/box-estatistica-sucesso/index.js";
 import BoxFalhas from "../../components/box-falhas/index.js";
+import ColocaCss from "../../utils/coloca-css/indes.js";
+
+ColocaCss({path: 'estatisticas'});
 
 const Estatisticas = () =>{
     const container = document.querySelector('.container');

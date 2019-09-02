@@ -1,0 +1,5 @@
+.barra-tempo{
+    height: 4px;
+    width: 5%;
+    background-image: linear-gradient(to right, #fff, var(--primary));
+}

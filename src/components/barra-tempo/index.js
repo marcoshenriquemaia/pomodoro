@@ -1,5 +1,7 @@
 import CriarElemento from "../shared/cria-elemento/index.js";
+import ColocaCss from "../../utils/coloca-css/indes.js";
 
+ColocaCss({path: 'barra-tempo'});
 
 const BarraTempo = () => {
     const boxBarraTempo = document.querySelector('.box-barra-tempo');

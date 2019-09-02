@@ -1,6 +1,7 @@
 import CriarElemento from "../shared/cria-elemento/index.js";
+import ColocaCss from "../../utils/coloca-css/indes.js";
 
-
+ColocaCss({path: 'card-historico'});
 
 const CardHistorico = ({tempoFinal}) => {
     const boxHistorico = document.querySelector('.box-historico');

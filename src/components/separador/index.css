@@ -1,0 +1,26 @@
+.separacao-historico{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    transition-duration: .4s;
+    transition-timing-function: ease-in-out;
+}
+.separacao-historico-grafico{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    transform: translateY(-300px);
+    transition-duration: .4s;    
+}
+.text-separacao-historico{
+    color: #fff;
+    width: 35%;
+    text-align: center;
+    background-color: var(--primary);
+}
